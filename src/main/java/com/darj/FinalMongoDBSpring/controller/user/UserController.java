@@ -32,6 +32,10 @@ public class UserController {
         userService.createUser(userEntity);
         UserDto adminUserEntity = new UserDto("Ada", "Admin", fecha, "admin@mail.com", "passw0rd");
         UserResponseDto userCreated = userService.createUser(adminUserEntity);
+        createUserAdmin(new UserDto("Alejo", "Java", fecha, "ada@mail.com", "passw0rd"));
+        UserDto adminUser = new UserDto("Karina", "Velandia", fecha, "k@gmail.com","password");
+       // userService.createUserAdmin(adminUserEntity);
+        userService.createUserAdmin(adminUser);
     }
 
     @GetMapping
